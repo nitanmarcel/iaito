@@ -44,6 +44,7 @@
 #include "widgets/CommentsWidget.h"
 #include "widgets/ConsoleWidget.h"
 #include "widgets/CustomCommandWidget.h"
+#include "widgets/CustomTitleBar.h"
 #include "widgets/Dashboard.h"
 #include "widgets/DebugActions.h"
 #include "widgets/DecompilerWidget.h"
@@ -122,6 +123,7 @@
 #include <QRubberBand>
 #include <QSysInfo>
 #include <QTcpServer>
+#include <QVBoxLayout>
 
 #include <QKeyEvent>
 #include <QMouseEvent>
@@ -967,6 +969,8 @@ void MainWindow::initUI()
     ui->setupUi(this);
     // always show the main window status bar
     statusBar()->show();
+
+    applyCustomFrame(this);
 
     // Install event filter to catch function key releases
     qApp->installEventFilter(this);

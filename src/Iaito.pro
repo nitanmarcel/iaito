@@ -98,6 +98,8 @@ macx {
     QMAKE_TARGET_BUNDLE_PREFIX = org.radare
     QMAKE_BUNDLE = iaito
     QMAKE_INFO_PLIST = macos/Info.plist
+    OBJECTIVE_SOURCES += widgets/CustomTitleBar_mac.mm
+    LIBS += -framework AppKit
 }
 
 unix {
@@ -229,6 +231,7 @@ SOURCES += \
     common/SyntaxHighlighter.cpp \
     widgets/DecompilerWidget.cpp \
     widgets/VisualNavbar.cpp \
+    widgets/CustomTitleBar.cpp \
     widgets/GraphView.cpp \
     dialogs/settings/SettingsDialog.cpp \
     dialogs/settings/AppearanceOptionsWidget.cpp \
@@ -422,6 +425,7 @@ HEADERS  += \
     common/SyntaxHighlighter.h \
     widgets/DecompilerWidget.h \
     widgets/VisualNavbar.h \
+    widgets/CustomTitleBar.h \
     widgets/GraphView.h \
     dialogs/settings/SettingsDialog.h \
     dialogs/settings/AppearanceOptionsWidget.h \
